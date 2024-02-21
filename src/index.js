@@ -19,6 +19,6 @@ const myelement = (
     </table>
   );
   
-  const container = document.getElementById('root');
+  const container = document.getElementById('sandy');
   const root = ReactDOM.createRoot(container);
-  root.render(myelement);
+  root.render(<p>Hallo</p>)
