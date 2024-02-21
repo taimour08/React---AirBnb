@@ -19,7 +19,14 @@ const myelement = (
     </table>
   );
   
-  const myElement = React.createElement('h1', {}, 'I do not use JSX!');
+  const myElement1 = React.createElement('h1', {}, 'I do not use JSX!');
+
+  const myElement = (
+    <div>
+      <p>I am a paragraph.</p>
+      <p>I am a paragraph too.</p>
+    </div>
+  );
 
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(myElement);
