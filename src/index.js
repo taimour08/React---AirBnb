@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-const myFirstElement = <h1>Hell React!</h1>
+const myFirstElement = <h1>Hey you!</h1>
 
 
 const myelement = (
@@ -19,6 +19,7 @@ const myelement = (
     </table>
   );
   
-  const container = document.getElementById('sandy');
-  const root = ReactDOM.createRoot(container);
-  root.render(<p>Hallo</p>)
+  const myElement = React.createElement('h1', {}, 'I do not use JSX!');
+
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(myElement);
