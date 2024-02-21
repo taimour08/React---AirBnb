@@ -21,12 +21,14 @@ const myelement = (
   
   const myElement1 = React.createElement('h1', {}, 'I do not use JSX!');
 
-  const myElement = (
-    <div>
-      <p>I am a paragraph.</p>
-      <p>I am a paragraph too.</p>
-    </div>
-  );
+const x = 5;
+let text = "Goodbye";
+if (x < 10) {
+  text = "Hello";
+}
+
+const myElement = <h1>{text}</h1>;
+
 
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(myElement);
