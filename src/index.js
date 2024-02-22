@@ -21,14 +21,18 @@ const myelement = (
   
   const myElement1 = React.createElement('h1', {}, 'I do not use JSX!');
 
-const x = 5;
-let text = "Goodbye";
-if (x < 10) {
-  text = "Hello";
+let x = 5
+const myElement = <h1>{(x) < 10 ? "Hello" : "Goodbye"}</h1>;
+
+class Jeep extends React.Component {
+  render() {
+    return <h2>Hi, I am a Cr!</h2>;
+  }
 }
 
-const myElement = <h1>{text}</h1>;
-
+function Car() {
+  return <h2>Hi, I am a Car!</h2>;
+}
 
   const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(myElement);
+  root.render(<Jeep />);
