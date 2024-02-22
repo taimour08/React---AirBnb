@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Car from './Car.js';
+import Garage from './Garage.js';
 
 const myFirstElement = <h1>Hey you!</h1>
 
@@ -45,5 +45,5 @@ function Drumset () {
   );
 }
 
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Car />);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Garage/>);
