@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Car from './Car.js';
 
 const myFirstElement = <h1>Hey you!</h1>
 
@@ -45,4 +46,4 @@ function Drumset () {
 }
 
   const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Drumset />);
+  root.render(<Car />);
