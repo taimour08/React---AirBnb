@@ -30,9 +30,19 @@ class Jeep extends React.Component {
   }
 }
 
-function Car() {
-  return <h2>Hi, I am a Car!</h2>;
+function Music(Props) {
+  return <h2>Hi, I am a {Props.color} Drum Set!</h2>;
+}
+
+function Drumset () {
+
+  return (
+    <>
+      <h1> Can you play? </h1>
+      <Music color = "blue"/>
+    </>
+  );
 }
 
   const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Jeep />);
+  root.render(<Drumset />);
