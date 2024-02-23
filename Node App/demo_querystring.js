@@ -6,14 +6,19 @@ var fs = require('fs');
     console.log('Saved!');
   });
 
-    fs.open('mynewfile2.txt', 'w', function (err, file) {
-      if (err) throw err;
-      console.log('Saved!');  
+  fs.writeFile('mynewfile3.txt', 'This is my text', function (err) {
+    if (err) throw err;
+    console.log('Replaced!');
   });
 
-  var fs = require('fs');
 
-fs.writeFile('mynewfile3.txt', 'Hello content!', function (err) {
-  if (err) throw err;
-  console.log('Saved!');
-});
+  fs.unlink('mynewfile3.txt', function (err) {
+    if (err) throw err;
+    console.log('File DelD')
+  });
+
+
+  fs.rename('mynewfile1.txt', 'myrenamedfile.txt', function (err) {
+    if (err) throw err;
+    console.log('File Renamed!');
+  });
