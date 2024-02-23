@@ -1,13 +1,13 @@
-var http = require('http');
+var events = require('events');
+var eventEmission = new events.EventEmitter();
 
-import('upper-case').then(uc => {
-  http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(uc.upperCase("Hello World!"));
-    res.end();
-  }).listen(8080);
-  
-}).catch(err => {
-  // Handle any errors
-});
+//Create an event handler:
+var myEventHandler = function () {
+  console.log('I hear a scream!');
+}
 
+//Assign the event handler to an event:
+eventEmission.on('sceam', myEventHandler);
+
+//Fire the 'scream' event:
+eventEmission.emit('scream');
