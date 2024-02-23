@@ -1,13 +1,10 @@
-var events = require('events');
-var eventEmission = new events.EventEmitter();
+var http = require('http');
 
-//Create an event handler:
-var myEventHandler = function () {
-  console.log('I hear a scream!');
-}
-
-//Assign the event handler to an event:
-eventEmission.on('sceam', myEventHandler);
-
-//Fire the 'scream' event:
-eventEmission.emit('scream');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');
+  res.write('<input type="file" name="filetoupload"><br>');
+  res.write('<input type="submit">');
+  res.write('</form>');
+  return res.end();
+}).listen(8080);
