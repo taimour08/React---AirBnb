@@ -1,13 +1,22 @@
 import React from 'react';
 
 
+function Bar (props) {
+
+  return (
+    <a>I am a {props.brand}!</a>
+  );
+}
+
 class Car extends React.Component {
-  render() {
+
+    render() {
     return (
-    <h2>I am a Car!</h2>
+    <a> He said  <Bar brand = "Falana"/>! </a>
     );
   }
 }
+
 
 
 export default Car;

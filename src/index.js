@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Garage from './Garage.js';
+import Car from './Car.js';
 import { useState } from 'react';
 
 const myFirstElement = <h1>Hey you!</h1>
@@ -53,6 +54,28 @@ function Drumset() {
 }
 
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Car/>);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 function PictureGallery({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -86,8 +109,4 @@ function App() {
 
 export default App;
 
-
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App/>);
+*/
