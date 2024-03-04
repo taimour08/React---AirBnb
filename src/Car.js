@@ -3,16 +3,19 @@ import React from 'react';
 
 function Bar (props) {
 
+  const carName = { name: "Henry Ford", model: "Dodge"}
+
   return (
-    <a>I am a {props.brand}!</a>
+    <a>I am a brand = {props.brand.model}!</a>
   );
 }
 
 class Car extends React.Component {
 
+    
     render() {
     return (
-    <a> He said  <Bar brand = "Falana"/>! </a>
+    <a> He said  <Bar brand = {carName}/>! </a>
     );
   }
 }
