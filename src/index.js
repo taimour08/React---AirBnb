@@ -26,8 +26,13 @@ const myelement = (
   
   const myElement1 = React.createElement('h1', {}, 'I do not use JSX!');
 
-let x = 5
-const myElement = <h1>{(x) < 10 ? "Hello" : "Goodbye"}</h1>;
+let x = 9
+
+var myElement;
+
+if (x < 10)
+  myElement = "h"
+
 
 class Jeep extends React.Component {
   render() {
@@ -50,4 +55,4 @@ function Drumset () {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myJSXElement);
+root.render(myElement);
