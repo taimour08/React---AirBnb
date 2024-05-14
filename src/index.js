@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Garage from './Garage.js';
 
+
+
+
 const myFirstElement = <h1>Hey you!</h1>
 
+const myJSXElement = React.createElement('h1', {}, 'I do not use JSX!');
 
 const myelement = (
     <table>
@@ -46,4 +50,4 @@ function Drumset () {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Garage/>);
+root.render(myJSXElement);
