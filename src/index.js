@@ -26,12 +26,8 @@ const myelement = (
   
   const myElement1 = React.createElement('h1', {}, 'I do not use JSX!');
 
-let x = 9
-
-var myElement;
-
-if (x < 10)
-  myElement = "h"
+let x = 20
+const myElement = <h1>{(x) < 10 ? "Hello" : "Goodbye"}</h1>;  // the conditional in js inside curly braces
 
 
 class Jeep extends React.Component {
@@ -41,7 +37,7 @@ class Jeep extends React.Component {
 }
 
 function Music(Props) {
-  return <h2>Hi, I am a {Props.color} Drum Set!</h2>;
+  return <h2>Hi, I am a {Props.color2} Drum Set!</h2>;
 }
 
 function Drumset () {
@@ -49,10 +45,10 @@ function Drumset () {
   return (
     <>
       <h1> Can you play? </h1>
-      <Music color = "blue"/>
+      <Music color2 = "bluel"/>
     </>
   );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
+root.render(<Drumset/>);
