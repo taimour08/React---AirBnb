@@ -3,32 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Poster Page</title>
+    <title>Masteng</title>
     <style>
         body {
-            background-color: black;
-            color: white;
             font-family: Arial, sans-serif;
-            display: flex; 
-            justify-content: space-around;
-            align-items: center;
-            height: 99vh;
+            background-color: #141414;
+            color: white;
             margin: 0;
+            padding: 0;
         }
-        .top-content {
-            height: 90%;
-            box-sizing: border-box;
-            font-style: italic;
-            color: lightcoral;
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #141414;
+            padding: 10px 20px;
         }
-
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #e50914;
+            color: white;
+        }
+        .navbar .left-nav, .navbar .right-nav {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .right-nav input {
+            padding: 6px;
+            margin-right: 10px;
+        }
+        .navbar .right-nav .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .navbar .right-nav .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .navbar .right-nav .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .navbar .right-nav .dropdown-content a:hover {
+            background-color: #575757;
+        }
+        .navbar .right-nav .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .header {
+            padding: 20px;
+            background-color: #141414;
+        }
+        .header h1 {
+            color: #e50914;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .row {
+            margin-bottom: 30px;
+        }
+        .row h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .row .movies {
+            display: flex;
+            overflow-x: auto;
+        }
+        .row .movies img {
+            width: 150px;
+            height: 225px;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
 
-    <div class="top-content">
-        <div class="text-container">
-            <h1>Mastenga</h1>
+    <div class="navbar">
+        <div class="left-nav">
+            <a href="home.html" style="color: #e50914; font-weight: bold;">Masteng</a>
+            <a href="#home">Home</a>
+            <a href="#tvshows">TV Shows</a>
+            <a href="#movies">Movies</a>
+        </div>
+        <div class="right-nav">
+            <input type="text" placeholder="Search...">
+            <a href="#kids">Kids</a>
+            <a href="#dvd">DVD</a>
+            <a href="#notifications">Notifications</a>
+            <div class="dropdown">
+                <a href="#account">Account</a>
+                <div class="dropdown-content">
+                    <a href="#profile">Profile</a>
+                    <a href="#settings">Settings</a>
+                    <a href="#logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <h1>TV Sci-Fi & Fantasy</h1>
+    </div>
+
+    <div class="content">
+        <div class="row">
+            <h2>Popular on Masteng</h2>
+            <div class="movies">
+                <img src="https://via.placeholder.com/150" alt="Movie 1">
+                <img src="https://via.placeholder.com/150" alt="Movie 2">
+                <img src="https://via.placeholder.com/150" alt="Movie 3">
+                <img src="https://via.placeholder.com/150" alt="Movie 4">
+                <img src="https://via.placeholder.com/150" alt="Movie 5">
+                <img src="https://via.placeholder.com/150" alt="Movie 6">
+            </div>
+        </div>
+        <div class="row">
+            <h2>Trending Now</h2>
+            <div class="movies">
+                <img src="https://via.placeholder.com/150" alt="Movie 1">
+                <img src="https://via.placeholder.com/150" alt="Movie 2">
+                <img src="https://via.placeholder.com/150" alt="Movie 3">
+                <img src="https://via.placeholder.com/150" alt="Movie 4">
+                <img src="https://via.placeholder.com/150" alt="Movie 5">
+                <img src="https://via.placeholder.com/150" alt="Movie 6">
+            </div>
+        </div>
+        <div class="row">
+            <h2>Asian Movies</h2>
+            <div class="movies">
+                <img src="https://via.placeholder.com/150" alt="Movie 1">
+                <img src="https://via.placeholder.com/150" alt="Movie 2">
+                <img src="https://via.placeholder.com/150" alt="Movie 3">
+                <img src="https://via.placeholder.com/150" alt="Movie 4">
+                <img src="https://via.placeholder.com/150" alt="Movie 5">
+                <img src="https://via.placeholder.com/150" alt="Movie 6">
+            </div>
         </div>
     </div>
 
